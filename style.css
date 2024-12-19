@@ -252,9 +252,6 @@ header nav ul ul,
 .large-screen #menubar {display: block;}
 .small-screen #menubar.display-block {display: block;}
 
-/*3本バーをデフォルトで非表示*/
-#menubar_hdr.display-none {display: none;}
-
 /*ドロップダウンをデフォルトで非表示*/
 .ddmenu_parent ul {display: none;}
 
@@ -290,7 +287,7 @@ a.ddmenu::before {
 }
 
 /* バーの設定 */
-#menubar_hdr div span {
+#menubar_hdr span {
 	display: block;
 	width: 100%;
 	height: 1.5px;
