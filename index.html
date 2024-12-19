@@ -1,24 +1,58 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ポートフォリオ</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <title>ATOM OFFICIAL PAGE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="上流工程から一貫して対応するWebサイト制作。採用・売上アップ・SEO対策など、課題解決に寄り添った制作を実現します。ファッションモデルとしての実績も活かし、視覚的にも訴求力のあるデザインを提供いたします。">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header>
-    <h1>私のポートフォリオサイト</h1>
-  </header>
 
-  <main>
-    <section>
-      <h2>セクション1</h2>
-      <p>ここに自己紹介や作品を載せる予定です。</p>
-    </section>
-  </main>
+<body class="home">
 
-  <script src="scripts.js"></script>
+    <div id="container">
+
+        <header>
+
+            <h1 id="logo"><a href="https://atom2525.github.io/"><img src="logo.svg" alt="ATOM OFFICIAL PAGE"></a></h1>
+
+            <nav>
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#profile">プロフィール</a></li>
+                    <li><a href="#brand">実績紹介</a>
+                        <ul>
+                            <li><a href="#">Fashion Model</a></li>
+                            <li><a href="#">Web Design</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#question">よくある質問</a></li>
+                    <li><a href="#contact">お問い合わせ</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <!--お問い合わせのボタン-->
+        <p id="btn-top">
+            <!-- x_iconリンク -->
+            <a href="https://www.example.com" target="_blank">
+                <img src="x_icon.svg" alt="Close" class="icon x-icon">
+            </a>
+
+            <!-- insta_iconリンク -->
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="insta_icon.svg" alt="Instagram" class="icon insta-icon">
+            </a>
+
+            <!-- お問い合わせリンク -->
+            <a href="#contact">
+                お問い合わせ
+            </a>
+        </p>
+        <!--ここまで-->
+
+    </div>
 </body>
-</html>
