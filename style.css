@@ -370,15 +370,18 @@ a.ddmenu::before {
     letter-spacing: 0.1em;  /* 文字間隔を少しだけ広く */
 }
 
-/* アイコンのスタイル */
+/* アイコンを縦に並べるために変更 */
 #btn-top a {
-    display: block; /* aタグをブロック表示にする */
+    display: flex; /* フレックスボックスに変更して縦並びにする */
+    flex-direction: column; /* アイコンを縦方向に並べる */
+    align-items: center; /* アイコンを中央揃えにする */
+    justify-content: center;
 }
 
 /* 画像アイコンの共通スタイル */
 #btn-top img.icon {
     display: block; /* ブロック表示にしてアイコンを縦に並べる */
-    margin-bottom: 0.5rem; /* アイコン間のスペース */
+    margin-bottom: 1rem; /* アイコン間のスペース */
     width: 2rem; /* アイコンのサイズを調整 */
     height: auto; /* 高さは自動で調整 */
 }
