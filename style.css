@@ -375,12 +375,26 @@ a.ddmenu::before {
     display: block; /* aタグをブロック表示にする */
 }
 
-/* アイコンのスタイル */
+/* 画像アイコンの共通スタイル */
 #btn-top img.icon {
     display: block; /* ブロック表示にしてアイコンを縦に並べる */
     margin-bottom: 0.5rem; /* アイコン間のスペース */
     width: 2rem; /* アイコンのサイズを調整 */
     height: auto; /* 高さは自動で調整 */
+}
+
+/* x_iconのスタイル */
+#btn-top .x-icon {
+    width: 2rem; /* x_iconのサイズ */
+    height: auto;
+    margin-bottom: 1rem; /* x_iconと他のアイコンの間隔調整 */
+}
+
+/* insta_iconのスタイル */
+#btn-top .insta-icon {
+    width: 2rem; /* insta_iconのサイズ */
+    height: auto;
+    margin-bottom: 1rem; /* insta_iconと他のアイコンの間隔調整 */
 }
 
 /* ホバー時の色変更 */
