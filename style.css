@@ -353,10 +353,8 @@ a.ddmenu::before {
 
 /*----------------------------画面右側端のお問い合わせボタン----------------------------*/
 #btn-top {
-    display: block;
-    text-decoration: none;
+    display: flex;
     position: fixed;
-    z-index: 100;
     right: 0px;  /* 右からの配置場所 */
     top: 20vw;   /* 上からの配置場所 */
     writing-mode: vertical-rl;
@@ -388,19 +386,9 @@ a.ddmenu::before {
     height: auto; /* 高さは自動で調整 */
 }
 
-/* x_iconのスタイル */
-#btn-top .x-icon {
-    margin-bottom: 1rem; /* アイコンと他のアイコンの間隔調整 */
-}
-
-/* insta_iconのスタイル */
-#btn-top .insta-icon {
-    margin-bottom: 1rem; /* アイコンと他のアイコンの間隔調整 */
-}
-
 /* 文章（お問い合わせ）のスタイル */
 #btn-top a:last-child {
-    color: #f6ebd2;  /* 文字色 */
+    color: #000;  /* 文字色 */
     font-size: 1rem;  /* フォントサイズ調整 */
     text-decoration: none;  /* 下線を削除 */
 }
@@ -409,3 +397,4 @@ a.ddmenu::before {
 #btn-top a:hover {
     color: #ec9347; /* ホバー時の文字色を変更 */
 }
+
