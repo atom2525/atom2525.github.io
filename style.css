@@ -193,166 +193,243 @@ header nav ul {
 #btn-top {
     display: flex;
     position: fixed;
-    right: 0px;  /* 右からの配置場所 */
-    top: 20vw;   /* 上からの配置場所 */
+    right: 0px;
+    /* 右からの配置場所 */
+    top: 20vw;
+    /* 上からの配置場所 */
     writing-mode: vertical-rl;
     text-orientation: upright;
-    
+
     /* 背景を無しにする */
-    background: none;  
-    color: #f6ebd2;  /* 文字色 */
-    padding: 2rem 1rem;  /* 上下、左右へのボタン内の余白 */
-    border-radius: 3px 0px 0px 3px;  /* 角を丸くする指示 */
-    letter-spacing: 0.1em;  /* 文字間隔を少しだけ広く */
+    background: none;
+    color: #f6ebd2;
+    /* 文字色 */
+    padding: 2rem 1rem;
+    /* 上下、左右へのボタン内の余白 */
+    border-radius: 3px 0px 0px 3px;
+    /* 角を丸くする指示 */
+    letter-spacing: 0.1em;
+    /* 文字間隔を少しだけ広く */
 }
 
 /* アイコンと文章を縦に並べるためのフレックスボックス設定 */
 #btn-top a {
-    display: flex; /* フレックスボックスに変更して縦並びにする */
-    flex-direction: column; /* アイコンと文章を縦方向に並べる */
-    align-items: center; /* アイコンと文章を中央揃えにする */
+    display: flex;
+    /* フレックスボックスに変更して縦並びにする */
+    flex-direction: column;
+    /* アイコンと文章を縦方向に並べる */
+    align-items: center;
+    /* アイコンと文章を中央揃えにする */
     justify-content: center;
-    margin-bottom: 1rem; /* 各リンク間のスペース */
-    text-decoration: none; /* アンダーラインを削除 */
-    color: inherit; /* 親要素の文字色を継承 */
+    margin-bottom: 1rem;
+    /* 各リンク間のスペース */
+    text-decoration: none;
+    /* アンダーラインを削除 */
+    color: inherit;
+    /* 親要素の文字色を継承 */
 }
 
 /* 画像アイコンの共通スタイル */
 #btn-top img.icon {
-    display: block; /* ブロック表示にしてアイコンを縦に並べる */
-    width: 2rem; /* アイコンのサイズを調整 */
-    height: auto; /* 高さは自動で調整 */
+    display: block;
+    /* ブロック表示にしてアイコンを縦に並べる */
+    width: 2rem;
+    /* アイコンのサイズを調整 */
+    height: auto;
+    /* 高さは自動で調整 */
 }
 
 /* 文章（お問い合わせ）のスタイル */
 #btn-top a:last-child {
-    color: #000;  /* 文字色 */
-    font-size: 1rem;  /* フォントサイズ調整 */
-    text-decoration: none;  /* 下線を削除 */
+    color: #000;
+    /* 文字色 */
+    font-size: 1rem;
+    /* フォントサイズ調整 */
+    text-decoration: none;
+    /* 下線を削除 */
 }
 
 /* ホバー時の色変更 */
 #btn-top a:hover {
-    color: #ec9347; /* ホバー時の文字色を変更 */
+    color: #ec9347;
+    /* ホバー時の文字色を変更 */
 }
 
 /*----------------------------ヘッダー内メニュー、開閉メニュー、共通のドロップダウン設定----------------------------*/
 header nav ul ul,
 .small-screen #menubar ul ul {
-	animation: opa1 0.5s 0.1s both;	/*0.1秒待機後、0.5秒かけてフェードイン表示*/
+    animation: opa1 0.5s 0.1s both;
+    /*0.1秒待機後、0.5秒かけてフェードイン表示*/
 }
 
 /*----------------------------メニューブロック初期設定----------------------------*/
 /*メニューをデフォルトで非表示*/
-#menubar {display: none;}
-#menubar ul {list-style: none;margin: 0;padding: 0;}
-#menubar a {display: block;text-decoration: none;}
+#menubar {
+    display: none;
+}
+
+#menubar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menubar a {
+    display: block;
+    text-decoration: none;
+}
 
 /*上で非表示にしたメニューを表示させる為の設定*/
-.large-screen #menubar {display: block;}
-.small-screen #menubar.display-block {display: block;}
+.large-screen #menubar {
+    display: block;
+}
+
+.small-screen #menubar.display-block {
+    display: block;
+}
 
 /*ドロップダウンをデフォルトで非表示*/
-.ddmenu_parent ul {display: none;}
+.ddmenu_parent ul {
+    display: none;
+}
 
 /*ddmenuを指定しているメニューに矢印アイコンをつける設定*/
 a.ddmenu::before {
-	font-family: "Font Awesome 6 Free";	/*Font Awesomeを使う指示*/
-	content: "\f078";		/*使いたいアイコン名（Font Awesome）をここで指定*/
-	font-weight: bold;		/*この手の設定がないとアイコンが出ない場合があります*/
-	margin-right: 0.5em;	/*アイコンとテキストとの間に空けるスペース*/
+    font-family: "Font Awesome 6 Free";
+    /*Font Awesomeを使う指示*/
+    content: "\f078";
+    /*使いたいアイコン名（Font Awesome）をここで指定*/
+    font-weight: bold;
+    /*この手の設定がないとアイコンが出ない場合があります*/
+    margin-right: 0.5em;
+    /*アイコンとテキストとの間に空けるスペース*/
 }
 
 /* ハンバーガーメニューの全体設定 */
 #menubar_hdr {
-	position: fixed;
-	top: 0;
-	right: calc(var(--space-small) + 5px);
-	width: 60px;
-	height: 60px;
-	padding: 20px 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	cursor: pointer;
-	z-index: 101;
-	animation: opa1 0.3s 0.5s both;
-	transition: transform 0.5s;
-	mix-blend-mode: exclusion;
+    position: fixed;
+    top: 0;
+    right: calc(var(--space-small) + 5px);
+    width: 60px;
+    height: 60px;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 101;
+    animation: opa1 0.3s 0.5s both;
+    transition: transform 0.5s;
+    mix-blend-mode: exclusion;
 }
 
 /* ホバー時 */
 #menubar_hdr.ham {
-	mix-blend-mode: normal;
+    mix-blend-mode: normal;
 }
 
 /* バーの設定 */
 #menubar_hdr div span {
-	display: block;
-	width: 100%;
-	height: 1.5px;
-	background-color: #fff;
-	position: absolute;
+    display: block;
+    width: 100%;
+    height: 1.5px;
+    background-color: #fff;
+    position: absolute;
     transition: all 0.5s ease-in-out;
-	position: absolute;
+    position: absolute;
 }
 
 #menubar_hdr div {
-	position: relative;width: 100%;height: 100%;
-	display: flex;flex-direction: column;justify-content: space-between;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-#menubar_hdr span:nth-child(1) { top: 0; }          /* 上の線 */
-#menubar_hdr span:nth-child(2) { top: 50%;         /* 中央の線 */
-    transform: translateY(-50%); /* 真ん中に揃える */
+
+#menubar_hdr span:nth-child(1) {
+    top: 0;
+}/* 上の線 */
+
+#menubar_hdr span:nth-child(2) {
+    top: 50%;
+    /* 中央の線 */
+    transform: translateY(-50%);
+    /* 真ん中に揃える */
 }
-#menubar_hdr span:nth-child(3) { bottom: 0; }      /* 下の線 */
-#menubar_hdr.ham div span:nth-child(1) {top: 50%;transform: translateY(-50%) rotate(45deg);}
-#menubar_hdr.ham div span:nth-child(2) {top: 50%;transform: translateY(-50%) rotate(-45deg);}
 
+#menubar_hdr span:nth-child(3) {
+    bottom: 0;
+}/* 下の線 */
 
-/* メニュー展開時 */
 #menubar_hdr.ham div span:nth-child(1) {
-	top: 50%;
-	transform: translateY(-50%) rotate(45deg);
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    /* 上の線を回転 */
 }
+
 #menubar_hdr.ham div span:nth-child(2) {
-	top: 50%;
-	transform: translateY(-50%) rotate(-45deg);
+    opacity: 0;
+    /* 真ん中の線を非表示 */
+}
+
+#menubar_hdr.ham div span:nth-child(3) {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+    /* 下の線を回転 */
 }
 
 
 /*----------------------------開閉メニュー----------------------------*/
 /*animation1のキーフレーム設定*/
 @keyframes animation1 {
-	0% {right: -100vw;}
-	100% {right: 0px;}
+    0% {
+        right: -100vw;
+    }
+
+    100% {
+        right: 0px;
+    }
 }
 
 /*メニューブロック設定*/
 .small-screen #menubar.display-block {
-	position: fixed;overflow: auto;z-index: 100;
-	right: 0px;top: 0px;
-	max-width: 800px;
-	height: 100%;
-	padding: 90px 10vw 50px;		/*ブロック内の余白。上、左右、下への順番。*/
-	background: var(--primary-color);	/*背景色*/
-	color: var(--primary-inverse-color);					/*文字色*/
-	animation: animation1 0.2s both;		/*animation1を実行する。0.2sは0.2秒の事。*/
+    position: fixed;
+    overflow: auto;
+    z-index: 100;
+    right: 0px;
+    top: 0px;
+    max-width: 800px;
+    height: 100%;
+    padding: 90px 10vw 50px;
+    /*ブロック内の余白。上、左右、下への順番。*/
+    background: var(--primary-color);
+    /*背景色*/
+    color: var(--primary-inverse-color);
+    /*文字色*/
+    animation: animation1 0.2s both;
+    /*animation1を実行する。0.2sは0.2秒の事。*/
 }
 
 /*子メニューの設定*/
 .small-screen #menubar ul ul {
-	margin: 2rem;	/*外側に空けるスペース。２文字分。*/
+    margin: 2rem;
+    /*外側に空けるスペース。２文字分。*/
 }
 
 /*メニュー１個あたりの設定*/
 .small-screen #menubar nav ul li {
-	border: 1px solid #fff;	/*枠線の幅、線種、色。*/
-	margin: 1rem 0;			/*メニューの外側に空けるスペース。上下、左右への順番。*/
-	border-radius: 5px;		/*角を丸くする指定*/
-}
-.small-screen #menubar a {
-	color: inherit;
-	padding: 1rem 2rem;	/*メニュー内の余白。上下、左右へ。*/
+    border: 1px solid #fff;
+    /*枠線の幅、線種、色。*/
+    margin: 1rem 0;
+    /*メニューの外側に空けるスペース。上下、左右への順番。*/
+    border-radius: 5px;
+    /*角を丸くする指定*/
 }
 
+.small-screen #menubar a {
+    color: inherit;
+    padding: 1rem 2rem;
+    /*メニュー内の余白。上下、左右へ。*/
+}
