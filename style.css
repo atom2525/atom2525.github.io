@@ -127,7 +127,7 @@ body:not(.home) header {
     display: block;
 }
 
-#logo {
+#logo, #logo p {
     margin-top: 5px;
     padding: 0;
     width: 10vw;
@@ -460,4 +460,73 @@ a.ddmenu::before {
     margin-bottom: 45px;
     letter-spacing: .08em;
     text-align: center;
+}
+
+/*----------------------------フッター内----------------------------*/
+
+/* ロゴが入ったブロック */
+footer .image {
+    width: 200px; /* ボックス幅 */
+    text-align: center; /* 中身をセンタリング */
+}
+
+/* 画面幅500px以下の追加指定 */
+@media screen and (max-width: 500px) {
+    footer .image {
+        width: auto; /* ボックス幅自動 */
+    }
+    footer .image img {
+        width: 80px; /* ロゴの幅 */
+    }
+}
+
+/* ロゴ */
+footer .logo {
+    opacity: 1; /* 完全に表示させる */
+}
+
+/* 画面幅600px以上の追加指定 */
+@media screen and (min-width: 600px) {
+    footer .text {
+        display: flex; /* CompanyとFollow Usを横並びにする */
+        gap: 5rem; /* CompanyとFollow Usの間の余白 */
+    }
+}
+
+/* 画面幅500px以上600px未満の場合の調整（オプション） */
+@media screen and (min-width: 500px) and (max-width: 600px) {
+    footer .image {
+        width: 150px; /* 中間サイズ */
+    }
+    footer .image img {
+        width: 70px; /* ロゴサイズの微調整 */
+    }
+}
+
+/* h4見出し（CompanyとFollow Usのテキスト部分）*/
+footer h4 {
+    font-weight: 300; /* 太さを少し細めに変更（200より見やすい場合も）*/
+    font-size: 1.2rem; /* 文字サイズを120% */
+    margin-bottom: 10px; /* 見出しとその下の要素との間に余白を追加 */
+}
+
+/*----------------------------フッター内にあるソーシャルメディアのアイコン----------------------------*/
+.icons {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* アイコンをセンターに配置 */
+    gap: 1rem; /* アイコン同士の間隔 */
+}
+
+.icons i {
+    font-size: 30px; /* アイコンサイズ */
+}
+
+/* レスポンシブ対応：画面幅500px以下の場合のアイコンサイズ変更 */
+@media screen and (max-width: 500px) {
+    .icons i {
+        font-size: 25px; /* 小さい画面でアイコンサイズを縮小 */
+    }
 }
