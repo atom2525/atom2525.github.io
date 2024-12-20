@@ -287,18 +287,28 @@ a.ddmenu::before {
 }
 
 /* バーの設定 */
-#menubar_hdr span {
+#menubar_hdr div span {
 	display: block;
 	width: 100%;
 	height: 1.5px;
 	background-color: #fff;
 	position: absolute;
-	transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+	position: absolute;
 }
 
-/* 各バーの位置 */
-#menubar_hdr div span:nth-child(1) {top: 0;}
-#menubar_hdr div span:nth-child(2) {bottom: 0;}
+#menubar_hdr div {
+	position: relative;width: 100%;height: 100%;
+	display: flex;flex-direction: column;justify-content: space-between;
+}
+#menubar_hdr span:nth-child(1) { top: 0; }          /* 上の線 */
+#menubar_hdr span:nth-child(2) { top: 50%;         /* 中央の線 */
+    transform: translateY(-50%); /* 真ん中に揃える */
+}
+#menubar_hdr span:nth-child(3) { bottom: 0; }      /* 下の線 */
+#menubar_hdr.ham div span:nth-child(1) {top: 50%;transform: translateY(-50%) rotate(45deg);}
+#menubar_hdr.ham div span:nth-child(2) {top: 50%;transform: translateY(-50%) rotate(-45deg);}
+
 
 /* メニュー展開時 */
 #menubar_hdr.ham div span:nth-child(1) {
@@ -309,15 +319,6 @@ a.ddmenu::before {
 	top: 50%;
 	transform: translateY(-50%) rotate(-45deg);
 }
-
-#menubar_hdr div {
-	position: relative;width: 100%;height: 100%;
-	display: flex;flex-direction: column;justify-content: space-between;
-}
-#menubar_hdr div span:nth-child(1) {top: 0;}
-#menubar_hdr div span:nth-child(2) {bottom: 0;}
-#menubar_hdr.ham div span:nth-child(1) {top: 50%;transform: translateY(-50%) rotate(45deg);}
-#menubar_hdr.ham div span:nth-child(2) {top: 50%;transform: translateY(-50%) rotate(-45deg);}
 
 
 /*----------------------------開閉メニュー----------------------------*/
